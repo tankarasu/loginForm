@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+  font-family: "Roboto";
+}
+
+:root {
+  --omrs-color-ink-low-contrast: rgba(60, 60, 67, 0.3);
+  --omrs-color-ink-medium-contrast: rgba(19, 19, 21, 0.6);
+  --omrs-color-interaction: #d2a526;
+  --omrs-color-interaction-minus-two: #f8f8f8;
+  --omrs-color-ink-high-contrast: #121212;
+}
+
+body {
+  background-color: #d2a526;
+  padding-top: 1rem;
+} /*TODO to remove*/
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 25px;
+  background-color: #f8f8f8;
+  width: 250px;
+}
+
+.loginRow {
+  display: flex;
+  flex-direction: row;
+}
+
+div.omrs-input-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+  width: 220px;
+}
+
+.omrs-input-underlined {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.omrs-input-underlined > input {
+  border: none;
+  border-bottom: 0.125rem solid var(--omrs-color-ink-low-contrast);
+  width: 100%;
+  height: 2rem;
+  font-size: 1.0625rem;
+  padding-left: 0.875rem;
+  line-height: 147.6%;
+  padding-top: 0.825rem;
+  padding-bottom: 0.5rem;
+  background: var(--omrs-color-interaction-minus-two);
+}
+
+.omrs-input-underlined > input:focus,
+.omrs-input-filled > input:focus {
+  outline: none;
+}
+
+.omrs-input-underlined > .omrs-input-label {
+  position: absolute;
+  top: 0.9375rem;
+  left: 0;
+  line-height: 147.6%;
+  color: var(--omrs-color-ink-medium-contrast);
+  transition: top 0.2s;
+}
+
+.omrs-input-underlined > input:hover {
+  background: var(--omrs-color-interaction-minus-two);
+  border-color: var(--omrs-color-ink-high-contrast);
+}
+
+.omrs-input-underlined > input:focus + .omrs-input-label,
+.omrs-input-underlined > input:valid + .omrs-input-label {
+  top: 0;
+  font-size: 0.9375rem;
+  margin-bottom: 32px;
+}
+
+.omrs-input-underlined > input:focus + .omrs-input-label,
+.omrs-input-underlined > input:focus {
+  color: var(--omrs-color-interaction);
+  border-color: var(--omrs-color-interaction);
+}
+
+.loginTitle {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.5rem;
+}
+
+.loginInfo {
+  margin: 0 0 1rem 0;
+  color: var(--omrs-color-ink-low-contrast);
+  font-size: 0.9rem;
+}
+
+.loginInfoFooter {
+  margin: 0;
+  color: var(--omrs-color-ink-low-contrast);
+  font-size: 0.9rem;
+}
+
+.loginForm p,
+.loginForm label {
+  color: var(--omrs-color-ink-medium-contrast);
+}
+
+.submitButton {
+  margin: 1rem 0;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 1px 2px 3px var(--omrs-color-ink-medium-contrast);
+  font-size: 1.5rem;
+}
+
+.loginRow {
+  margin-left: 15px;
+  align-self: start;
+}
+
+#remember {
+  margin-left: 0.7rem;
+}
